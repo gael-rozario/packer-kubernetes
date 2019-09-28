@@ -1,0 +1,10 @@
+ "variables": {
+    "source_image": "ubuntu-minimal-1604-xenial-v20190918"
+    "instance": "g1-small",
+    "region": "us-east-1",
+    "zone": "us-east-1b",
+    "project_id": "{{env `PROJECT_ID`}}"
+    "auth_file": "{{env `GOOGLE_APPLICATION_CREDENTIALS`}}"
+    "description": "ubuntu 16.04 ansible master image"
+    "target_image_name": "ubuntu-16-ansible-master"
+    }
