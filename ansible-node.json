@@ -1,14 +1,14 @@
 {
   "variables": {
     "default": "gce-packer",
-    "source_image": "ubuntu-minimal-1604-lts",
+    "source_image": "ubuntu-1604-lts",
     "instance": "g1-small",
     "region": "us-east1",
     "zone": "us-east1-b",
     "project_id": "{{env `PROJECT_ID`}}",
     "auth_file": "{{env `GOOGLE_APPLICATION_CREDENTIALS`}}",
-    "description": "ubuntu 16.04 ansible master image",
-    "target_image_name": "ubuntu-16-ansible-master"
+    "description": "ubuntu 16.04 ansible node image",
+    "target_image_name": "ubuntu-16-ansible-node"
   },
   "builders": [
     {
@@ -46,7 +46,7 @@
     },
    {
       "type": "shell",
-      "script": "ansiblemaster.sh"
+      "script": "ansiblenode.sh"
    }   
   ]
 }
